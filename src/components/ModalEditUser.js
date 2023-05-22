@@ -12,7 +12,7 @@ const ModalEditUser = (prop) => {
 
     const handleEditUser = async () => {
         let res = await putUpdateUser(name, job);
-        if (res && res.UpdateAt) {
+        if (res && res.updatedAt) {
             //success
             handleEditUserFromModal({
                 first_name: name,
@@ -31,7 +31,7 @@ const ModalEditUser = (prop) => {
         }
 
     }, [dataUserEdit])
-    
+
     return (
         <>
 
